@@ -23,9 +23,4 @@ img.load()
 print("Image size:", img.size)
 print("Image mode:", img.mode)
 
-a = np.array(img, dtype=np.uint8).reshape(img.size[::-1])
-
-# b = a[1000:2000, 1000:2000]
-pic = Image.fromarray(a)
-
-average_blur(pic,4).save('darwin2.png')
+average_blur(img,4).save('darwin2.png')
